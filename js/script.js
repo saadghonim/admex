@@ -9,6 +9,9 @@ $(document).ready(function() {
     $(".hamburger").click(function() {
       $(".nav-links").toggleClass("open");
     });
+    $(".close_").click(function(){
+      $(".nav-links").removeClass("open");
+    });
 
 /***************************
  ***************************
@@ -16,6 +19,7 @@ slider
 ***************************
 ***************************/
   $('.slider_main .owl-carousel').owlCarousel({
+    autoplay: true,
     loop:true,
     margin:10,
     nav:true,
@@ -77,7 +81,6 @@ start gallery
 $('.gallery .owl-carousel').owlCarousel({
   margin:10,
   loop:true,
-  autoWidth:true,
   items:4,
   responsive: {
     0: {
