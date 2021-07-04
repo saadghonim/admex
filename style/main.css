@@ -130,6 +130,18 @@ p,h1,h2,h3,h4,h5,h6{
 .slide_img img{
   opacity: .5;
 } 
+.slide_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
+.slide_img{
+  position: relative;
+  padding-bottom: 59.2347314202%;
+
+}
 .slide_text{
   position: absolute;
   bottom: 38%;
@@ -167,10 +179,11 @@ p,h1,h2,h3,h4,h5,h6{
   margin-right: 2px;
 
 }
-.slider_main .owl-dots .owl-dot.active{
-  background-color: rgb(237, 27, 36);
-
-}
+.owl-carousel .owl-nav button.owl-next,
+ .owl-carousel .owl-nav button.owl-prev,
+ .owl-carousel button.owl-dot.active{
+   background-color:rgb(237, 27, 36);
+ }
 @media(max-width:992px){
   .slide_img{
     clip-path:none
@@ -185,7 +198,9 @@ p,h1,h2,h3,h4,h5,h6{
     margin-top: 10px;
   }
   .slider_main .owl-dots{
-    display: none;
+    bottom: 4%;
+    transform: translateX(-50%);
+    left: 50%;
   }
   .slide_text{
     bottom: 26%;
@@ -200,7 +215,13 @@ p,h1,h2,h3,h4,h5,h6{
     margin-top: 5px;
   }
   .slide_text {
-    bottom: 17%;}
+    bottom: 27%;
+    width:50%;
+  }
+  .slider_main .owl-dots .owl-dot{
+    width: 20px;
+  }
+
 }
 /* end slider */
 
@@ -212,16 +233,16 @@ p,h1,h2,h3,h4,h5,h6{
   justify-content: center;
 }
 .tab-pane{
-  width: 80%;
   margin: auto;
   text-align: center;
   margin-top: 60px;
+  padding:0;
 }
 .tab-pane h4{
   font-size: 24px;
   font-family:"OpenSans-Bold";
   color: rgb(0, 0, 0);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .tab-pane p{
   font-size: 15px;
@@ -269,7 +290,7 @@ p,h1,h2,h3,h4,h5,h6{
     height: 70px;
   }
   .tab-pane{
-    margin-top: 35px;
+    margin-top: 20px;
   }
   .tab-pane h4{
     font-size: 23px;
@@ -286,7 +307,7 @@ p,h1,h2,h3,h4,h5,h6{
 
 @media(max-width:992px){
   .about-us{
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .mob_ic .my-mail{
     border: none;
@@ -314,7 +335,7 @@ p,h1,h2,h3,h4,h5,h6{
   text-align: center;
   align-items: center;
   align-content: center;
-  margin-top: 100px;
+  margin-top: 140px;
 }
 .services h2{
   font-size: 24px;
@@ -345,6 +366,7 @@ p,h1,h2,h3,h4,h5,h6{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 200px;
 }
 .ser_icon .item_ .pic{
   height: 60px;
@@ -376,7 +398,8 @@ p,h1,h2,h3,h4,h5,h6{
 }
 .login-box a:hover {
   transition: .5;
-  border:none
+  border:none;
+  color:#ed1b24;
 }
 .login-box a:hover span {
   position: absolute;
@@ -453,7 +476,7 @@ p,h1,h2,h3,h4,h5,h6{
 @media(max-width:767px){
   .services{
     height: auto;
-    margin-top: 60px;
+    margin-top: 40px;
   }
   .ser_icon{
     flex-direction: column;
@@ -468,6 +491,9 @@ p,h1,h2,h3,h4,h5,h6{
   }
   .services .login-box{
     margin-bottom: 40px;
+  }
+  .services .login-box a:hover{
+    color:#ed1b24;
   }
 }
 /* submit */
@@ -513,7 +539,7 @@ start Gallery
 .gall_bt{
   display: flex;
   justify-content: center;
-  margin: 20px 0 70px;
+  margin: 30px 0 40px;
 }
 .gall_bt a{
   position: relative;
@@ -523,13 +549,15 @@ start Gallery
   font-size: 13px;
   font-family: "OpenSans";
   background-color: rgb(245, 245, 245);
-  color: #ed1b24;
+  color: rgb(175, 175, 175);
   text-decoration: none;
   overflow: hidden;
   transition: .5s;
   display: flex;
   justify-content: center;
-  
+}
+.gall_bt a:hover{
+  color:#ed1b24;
 }
 @media(max-width:767px){
   .img_sm .item_img{
@@ -544,13 +572,36 @@ start Gallery
   }
   .gallery h2{
     margin: 0;
+    margin-bottom: -20px;
   }
   .gall_bt a{
     width: 120px;
     height: 35px;
   }
   .gallery {
-    margin-top: 35px;
+    margin-top: 40px;
+  }
+  .gall_img .owl-dots .owl-dot.active{
+    background-color: rgb(237, 27, 36);
+  
+  }
+  .gall_img .owl-dots{
+    position: absolute;
+    bottom: 8%;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 100%;
+  }
+  .gall_img .owl-dots .owl-dot{
+    width: 20px;
+    height: 2px;
+    background-color: rgb(218, 231, 238);
+    margin-right: 2px;
+  
+  }
+  .gall_img .owl-dots .owl-dot.active{
+    background-color: rgb(237, 27, 36);
+  
   }
 }
 
@@ -603,19 +654,40 @@ start news
   }
 }
 .news .gall_bt{
-  margin: 20px 0 0;
+  margin: 50px 0 0;
 }
 @media(max-width:767px){
   .news .gall_bt{
-    margin-top: 0;
+    margin-top: 30px;
   }
 }
 @media(max-width:767px){
   .news {
-    margin-top: 50px;
+    margin: 50px 20px 0;
 }
 .news h2{
   font-size: 22px;
+}
+.news .owl-dots .owl-dot.active{
+  background-color: rgb(237, 27, 36);
+
+}
+.news .owl-dots{
+  position: absolute;
+  bottom: -8%;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.news .owl-dots .owl-dot{
+  width: 20px;
+  height: 2px;
+  background-color: rgb(218, 231, 238);
+  margin-right: 2px;
+
+}
+.news .owl-dots .owl-dot.active{
+  background-color: rgb(237, 27, 36);
+
 }
 }
 /* ************
@@ -754,7 +826,7 @@ footer .f_list {
 @media (max-width: 767px) {
 footer .f_list {
   padding: 0; 
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 } 
 }
 footer .f_list .nest_list {
@@ -811,6 +883,10 @@ footer .down_f{margin-bottom: 0;}
   color: rgb(199, 199, 199);
   line-height: 24px;
   margin-top: 15px;
+}
+.e-mail ::placeholder {
+  color: rgb(199, 199, 199);
+
 }
 .e-mail input:focus{
   outline: 0;
@@ -884,8 +960,8 @@ footer .down_f{margin-bottom: 0;}
     justify-content: center;
     margin-bottom: 10px;
   }
-  .f_list .nest_list li{
-    text-align: center;
+  .nest_list li:last-child {
+    border: none;
   }
 
   .e-mail h4, .e-mail p{
@@ -901,6 +977,9 @@ footer .down_f{margin-bottom: 0;}
   }
   .copy .left{
     margin-bottom: 10px;
+  }
+  footer {
+    margin-top: 40px;
   }
 }
 /* ************
@@ -967,7 +1046,7 @@ end footer
 }
 @media screen and (max-width: 991px) {
 .line {
-  width: 25px;
+  width: 20px;
   height: 3px;
   background: rgb(1, 109, 181);
   margin: 5px;
@@ -988,9 +1067,9 @@ nav {
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  clip-path: circle(100px at 90% -10%);
-  -webkit-clip-path: circle(100px at 90% -10%);
-  transition: all .5s ease-out;
+  clip-path: circle(100px at 125% -10%);
+  -webkit-clip-path: circle(100px at 125% -10%);
+  transition: .5s;
   pointer-events: none;
   top: 0;
   visibility: hidden;
@@ -999,8 +1078,8 @@ nav {
 
 }
 .nav-links.open {
-  clip-path: circle(1000px at 90% -10%);
-  -webkit-clip-path: circle(1000px at 90% -10%);
+  clip-path: circle(1000px at 125% -10%);
+  -webkit-clip-path: circle(1000px at 125% -10%);
   pointer-events: all;
   visibility: visible;
   z-index: 99;
@@ -1055,7 +1134,7 @@ li.fade {
   justify-content: center;
 }
 .header .logo img{
-  width:75%;
+  width:70%;
 }
 .header_main{
   position: static;
@@ -1154,6 +1233,9 @@ li.fade {
 @media(max-width:767px){
   .input-search{
     width: 100%;
+  }
+  .header{
+    margin:10px 0;
   }
 }
 

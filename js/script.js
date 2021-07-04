@@ -19,12 +19,16 @@ slider
 ***************************
 ***************************/
   $('.slider_main .owl-carousel').owlCarousel({
-    autoplay: true,
+    autoplay: false,
     loop:true,
     margin:10,
+    touchDrag  : false,
+    mouseDrag  : false,
     nav:true,
     animateOut: 'fadeOut',
-    autoplayHoverPause:true,
+    animateIn: 'fadeIn',
+
+    autoplayHoverPause:false,
     responsive:{
     0:{
       items:1
