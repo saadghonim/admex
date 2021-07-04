@@ -1061,10 +1061,8 @@ end footer
 }
 @media screen and (max-width: 991px) {
 .line {
-  width: 20px;
-  height: 3px;
-  background: rgb(1, 109, 181);
-  margin: 5px;
+  color: rgb(1, 109, 181);
+  font-size: 21px;
 }
 nav {
   position: relative;
@@ -1082,13 +1080,12 @@ nav {
   height: 100vh;
   width: 100%;
   flex-direction: column;
-  clip-path: circle(100px at 125% -10%);
-  -webkit-clip-path: circle(100px at 125% -10%);
   transition: .5s;
   pointer-events: none;
   top: 0;
   visibility: hidden;
-  z-index: 99;
+  opacity: 0;
+  z-index: -1;
   margin: 0 -15px;
 
 }
@@ -1097,7 +1094,9 @@ nav {
   -webkit-clip-path: circle(1000px at 125% -10%);
   pointer-events: all;
   visibility: visible;
+  opacity: 1;
   z-index: 99;
+  transition: .5s;
 }
 .landing {
   flex-direction: column;
