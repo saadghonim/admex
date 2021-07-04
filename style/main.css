@@ -249,6 +249,7 @@ p,h1,h2,h3,h4,h5,h6{
   line-height: 30px;
   font-family: "OpenSans";
   color: rgb(0, 0, 0);
+  padding: 0 40px
 
 }
 .nav-tabs .nav-link{
@@ -313,13 +314,20 @@ p,h1,h2,h3,h4,h5,h6{
     border: none;
     background-color: transparent;
     color: rgb(1, 109, 181);
-    font-size: 18px;
+    font-size: 20px;
+    padding: 0;
+    margin-right: 15px;
   }
   
 }
 @media(min-width:992px){
   .mob_ic{
     display: none!important; ;
+  }
+}
+@media(max-width:767px){
+  .tab-pane p{
+    padding: 0 10px;
   }
 }
 /* end about us */
@@ -350,7 +358,7 @@ p,h1,h2,h3,h4,h5,h6{
   line-height: 24px;
   color: rgb(255, 255, 255);
   font-family: "OpenSans";
-  width: 80%;
+  padding: 0 40px;
 }
 .ser_icon{
   display: flex;
@@ -494,6 +502,9 @@ p,h1,h2,h3,h4,h5,h6{
   }
   .services .login-box a:hover{
     color:#ed1b24;
+  }
+  .services p{
+    padding: 0 10px;
   }
 }
 /* submit */
@@ -933,6 +944,10 @@ footer .down_f{margin-bottom: 0;}
   margin-bottom: 5px;
 
 }
+.f_list .nest_list li:nth-child(4),.f_list .nest_list li:nth-child(6){
+  border:none;
+}
+
 @media(max-width:767px){
   footer{
     margin-top: 50px;
@@ -1124,7 +1139,14 @@ li.fade {
 .nav_ .anc-nav {
   flex-direction: row;
   margin-bottom: 15px;
+  font-size: 17px;
 
+}
+.ico_n{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:22px;
 }
 .nav_ .anc-nav i{
   margin:0 5px 0 0 ;
