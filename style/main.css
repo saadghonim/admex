@@ -1059,6 +1059,10 @@ end footer
   font-size: 20px;
 
 }
+.line {
+  color: rgb(1, 109, 181);
+  font-size: 21px;
+}
 @media screen and (max-width: 991px) {
 .line {
   color: rgb(1, 109, 181);
