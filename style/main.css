@@ -1074,9 +1074,9 @@ nav {
 
 .hamburger {
   cursor: pointer;
-  transform: translate(-5%, -50%);
   z-index: 2;
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
 }
 .nav-links {
   position: fixed;
